@@ -6,6 +6,6 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: xenoci-macos-latest
     steps:
       - run: for i in $(seq 1 10); do echo t$i; sleep 60; done
