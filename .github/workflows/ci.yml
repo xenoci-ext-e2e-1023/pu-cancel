@@ -1,0 +1,11 @@
+name: Slow test
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - run: for i in $(seq 1 10); do echo t$i; sleep 60; done
